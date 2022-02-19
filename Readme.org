@@ -1,0 +1,16 @@
+* Testing Shell code with [[https://github.com/bats-core/bats-core][BATS]]
+- [[https://bats-core.readthedocs.io/en/stable/index.html][Documentation]]
+- [[https://github.com/bats-core/bats-core][GitHub -- bats-core]]
+- [[https://www.baeldung.com/linux/testing-bash-scripts-bats][Tutorial -- mostly covered by the docs]]
+** Setup
+- [[https://bats-core.readthedocs.io/en/stable/tutorial.html#quick-installation][Quick install to existing project]]:
+  #+begin_src bash
+    git submodule add https://github.com/bats-core/bats-core.git test/bats
+    git submodule add https://github.com/bats-core/bats-support.git test/test_helper/bats-support
+    git submodule add https://github.com/bats-core/bats-assert.git test/test_helper/bats-assert
+  #+end_src
+
+** Execute Tests
+#+begin_src bash
+  ./test/bats/bin/bats test/test.bats
+#+end_src
